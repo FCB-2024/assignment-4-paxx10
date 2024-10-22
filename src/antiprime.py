@@ -4,35 +4,22 @@
 import sys
 def main() :
 	x = int(sys.argv[1])
-	def comptadorx() :
+	def comptador(x):
 		divisorsx = 0
 		i = 1
-		while i <= x :
-			if x % i == 0 :
+		while i <= x:
+			if x % i == 0:
 				divisorsx = divisorsx + 1
 			i = i + 1
-		return (comptadorx)
-	r = comptadorx
+		return divisorsx
+	r = comptador(x)
 
-	def comptadorpetits() :
-		divisorspetits = 0
-		i2 = 1
-		while i2 < x :
-				if divisorspetits % i2 == 0 :
-					divisorspetits = divisorspetits + 1
-				i2 = i2 + 1
-		return comptadorpetits
-	j = comptadorpetits
-	
-	if j > r :
-		return ('not anti-prime')
-	else :
-		return("anti-prime")
-	## THE LAST LINES OF YOUR CODE SHOULD EITHER
-	## RETURN THE VALUE "anti-prime" or "not anti-prime"
-	## REPLACE THE FOLLOWING LINE BY WHATEVER LINES
-	## OF CODE ALLOW THIS FUNCTION TO RETURN THE VALUE
-	## "anti-prime" or "not anti-prime"
+	for i in range (1,x):
+		if comptador(i) >= r:
+			return ("not anti-prime")
+			
+	return("anti-prime")
+
 
 
 ## DO NOT REMOVE THIS LINE BELOW
